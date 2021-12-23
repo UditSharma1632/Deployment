@@ -7,6 +7,10 @@ node {
     stage('Build and Package') {
                 bat "mvn clean package"
     }
+    
+    stage('Deploy') {
+                bat "mvn deploy"
+    }
      
     stage('Nexus') {
         nexusArtifactUploader artifacts: [[artifactId: 'jenkins', classifier: '', file: 'target/jenkins-1.0.0.jar', type: 'jar']], 
@@ -14,7 +18,4 @@ node {
             protocol: 'http', repository: 'nexus-repo', version: '1.0.0'
     }
     
-    stage('ansible') {
-                ansiblePlaybook(credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible_master', inventory: 'inventory.inv', playbook: 'playbook.yml')
-    }
 }
