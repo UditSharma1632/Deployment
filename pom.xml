@@ -13,13 +13,13 @@
 	<repository>
 		<id>nexus</id>
 		<name>Artifact</name>
-		<url>http://localhost:8110/repository/nexus-repo/</url>
+		<url>http://localhost:8110/repository/deployment/</url>
 	</repository>
  
 	<snapshotRepository>
 		<id>nexus</id>
 		<name>Artifact</name>
-		<url>http://localhost:8110/repository/nexus-repo//</url>
+		<url>http://localhost:8110/repository/deployment/</url>
 	</snapshotRepository>
 
 </distributionManagement>
