@@ -6,9 +6,8 @@ node {
     }
    
     stage('Executing Playbook') { 
-                ansiblePlaybook (credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible',
-                    inventory: 'inventory.inv',
-                    playbook: 'playbook.yml')
+                ansiblePlaybook (ansiblePlaybook credentialsId: 'ssh-key', disableHostKeyChecking: true, installation: 'ansible', 
+                                 inventory: 'inventory.inv', playbook: ' playbook.yml')
         
     }
     
