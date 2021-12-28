@@ -6,7 +6,7 @@ node {
     }
    
     stage('Executing Playbook') { 
-                ansiblePlaybook (credentialsId: 'id_rsa', disableHostKeyChecking: true, 
+                ansiblePlaybook (credentialsId: 'id_rsa', disableHostKeyChecking: true,
                                  installation: 'ansible', inventory: 'inventory.inv', playbook: 'playbook.yml')
         
     }
