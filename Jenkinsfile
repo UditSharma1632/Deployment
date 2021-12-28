@@ -1,7 +1,7 @@
 node {
     stage('Preparation') { // for display purposes
         // Get some code from a GitHub repository
-        git 'https://github.com/UditSharma1632/jenkins.git'
+        git 'https://github.com/UditSharma1632/deployment.git'
         
     }
    
